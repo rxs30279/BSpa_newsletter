@@ -1,0 +1,150 @@
+
+:root {
+    --darkSlateGrey: hsl(234, 29%, 20%);
+    --charcoalGrey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+   
+}
+
+html {
+    font-size: 16px;
+}
+
+/* Typography */
+
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:var( --darkSlateGrey);
+}
+h4 ,li {
+    font-size: 1rem;
+    font-weight: 400;
+    color:var( --darkSlateGrey);
+}
+
+.container {
+    font-family: MyFont;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: var(--charcoalGrey);
+    display: flex;
+    flex-direction: column;   
+}
+.hero img{
+    width: 100%;  
+    
+}
+
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 3vh 7vh 8vw 8vw;
+} 
+
+.sign-up ul li {
+    display:flex;
+    align-content:flex-end;
+    list-style:none;
+    padding: 1.5vh 0; 
+    font-size: 1rem;   
+}
+
+.sign-up ul li img{
+    margin-right: 4vw;
+    width: 1.3rem;
+    height: 1.3rem;    
+}
+
+.email-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+  
+} 
+input {
+    box-sizing: border-box;
+    display: inline-block;
+    border-color:hsl(231, 7%, 60% , 0.4); 
+    border-width: 0.5px;
+    width: 110%;
+    height: 8vh;
+    border-radius: 7px;
+    padding-left: 20px;
+    margin-top: 0.8vh;
+} 
+
+::placeholder {
+    color: hsl(231, 7%, 60% , 0.7);
+    font-size: 1rem;
+}
+
+
+button {
+    background-color: var(--charcoalGrey); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 7px;
+    height:8vh;
+    width: 110%;
+  }
+
+  @media screen and (min-width: 575px ){
+
+    body {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-color:  var( --darkSlateGrey);
+       
+    }
+ 
+    .container {
+        display:flex;
+        flex-direction: row-reverse;
+        min-height: 70%;
+        height: 70%;
+        width: 70%;
+        background-color: var(--white);
+        border-radius: 20px;
+    }
+
+    .hero img {
+        height:100%;
+        width: 100%;
+        padding: 1rem 1rem 1rem 0;
+        margin:0;   
+    }
+    .sign-up {
+       justify-content: space-around;
+       width: 50%;
+       height:80%; 
+       font-size: 0.8rem;
+       margin: 2rem 2rem 4rem 3vw;
+    }
+    input {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+  }
